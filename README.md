@@ -8,8 +8,15 @@ viaje.
 
 ```text
 .
+├── assets/
+│   └── images/         # Fotografías locales y documento de créditos
 ├── css/
-│   └── trips.css  # Variables, estilos base y componentes reutilizables
+│   ├── trips.css       # Variables, estilos base y componentes reutilizables
+│   └── destination.css # Componentes de las guías de destino
+├── destinations/
+│   └── budapest.html   # Página piloto de Budapest
+├── js/
+│   └── destination.js  # Cambio, previsión meteorológica y mapas
 ├── index.html     # Portada del sitio
 ├── README.md      # Documentación del proyecto
 └── .gitignore     # Archivos que Git no debe versionar
@@ -52,3 +59,14 @@ El repositorio está pensado para publicarse mediante GitHub Pages en:
 <https://mpadilvi.github.io/trips.github.io/>
 
 Los destinos y la estructura definitiva se añadirán a medida que se definan.
+
+## Datos dinámicos
+
+La guía de Budapest consulta dos servicios sin clave de API desde el navegador:
+
+- Frankfurter, basado en los tipos de referencia del BCE, para actualizar HUF/EUR.
+- Open-Meteo para mostrar la previsión del 11 al 14 de septiembre de 2026 cuando
+  esas fechas entren en su horizonte disponible.
+
+Si cualquiera de los servicios no responde, la página conserva una referencia de
+cambio fechada y los valores climáticos oficiales de septiembre como alternativa.

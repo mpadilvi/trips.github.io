@@ -8,17 +8,103 @@
       content="Ideas, información práctica e itinerarios para elegir tu próximo destino."
     >
     <title>Próximos destinos</title>
-    <link rel="stylesheet" href="css/trips.css">
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="css/trips.css?v=4">
   </head>
   <body>
-    <main class="card">
-      <p class="eyebrow">Cuaderno de viajes</p>
-      <h1>¿Dónde vamos ahora?</h1>
-      <p>
-        Estamos preparando una selección de destinos con ideas, información práctica
-        e itinerarios para ayudarte a elegir tu próximo viaje.
-      </p>
-      <p class="status">Próximamente, nuevos destinos</p>
+    <header class="site-header container">
+      <a class="brand" href="index.html" aria-label="Inicio de Próximos destinos">
+        <span class="brand-mark" aria-hidden="true">N</span>
+        <span>Próximos destinos</span>
+      </a>
+
+      <nav aria-label="Navegación principal">
+        <a href="#destinos">Destinos</a>
+        <a href="#proyecto">El proyecto</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero container" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Cuaderno de viajes</p>
+          <h1 id="hero-title">¿Dónde vamos ahora?</h1>
+          <p class="hero-intro">
+            Un espacio para descubrir, comparar y preparar posibles destinos sin perder
+            de vista lo que de verdad importa en cada viaje.
+          </p>
+          <a class="button" href="#destinos">Explorar destinos</a>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <div class="route-line"></div>
+          <span class="route-point route-point-start"></span>
+          <span class="route-point route-point-end"></span>
+          <div class="compass">
+            <span>N</span>
+          </div>
+          <p>El siguiente viaje empieza aquí</p>
+        </div>
+      </section>
+
+      <section class="destinations-section" id="destinos" aria-labelledby="destinations-title">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Elige tu próxima ruta</p>
+              <h2 id="destinations-title">Destinos</h2>
+            </div>
+            <p>
+              Cada destino tendrá su propia guía con la información necesaria para
+              valorar la opción y organizar el viaje.
+            </p>
+          </div>
+
+          <a class="destination-card" href="destinations/budapest.html">
+            <div class="destination-card-copy">
+              <p class="status">Página piloto · lista</p>
+              <h3>Budapest</h3>
+              <p>Tres itinerarios para 4 días: imprescindibles, historia o excursión a Szentendre.</p>
+              <span class="destination-card-link">Abrir guía <span aria-hidden="true">→</span></span>
+            </div>
+            <div class="destination-card-meta">
+              <span>11–14 sep 2026</span>
+              <span>3 viajeros</span>
+              <span>Transporte público + a pie</span>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <section class="project-section container" id="proyecto" aria-labelledby="project-title">
+        <p class="eyebrow">Una decisión más sencilla</p>
+        <h2 id="project-title">Toda la información, en un mismo lugar.</h2>
+
+        <div class="principles-grid">
+          <article>
+            <span>01</span>
+            <h3>Comparar</h3>
+            <p>Organizar los datos clave para entender rápidamente cada opción.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Decidir</h3>
+            <p>Valorar cada destino con criterios claros y útiles para el viaje.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Preparar</h3>
+            <p>Reunir la información práctica cuando llegue el momento de viajar.</p>
+          </article>
+        </div>
+      </section>
     </main>
+
+    <footer>
+      <div class="container footer-inner">
+        <p>Próximos destinos</p>
+        <p>Un cuaderno para imaginar el siguiente viaje.</p>
+      </div>
+    </footer>
   </body>
 </html>
