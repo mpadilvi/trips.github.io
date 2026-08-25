@@ -8,80 +8,10 @@
       content="Ideas, información práctica e itinerarios para elegir tu próximo destino."
     >
     <title>Próximos destinos</title>
-    <style>
-      :root {
-        color-scheme: light;
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-        background: #f5f1e8;
-        color: #17332d;
-      }
-
-      * {
-        box-sizing: border-box;
-      }
-
-      body {
-        min-height: 100vh;
-        margin: 0;
-        display: grid;
-        place-items: center;
-        padding: 2rem;
-      }
-
-      main {
-        width: min(42rem, 100%);
-        padding: clamp(2rem, 7vw, 5rem);
-        background: #fffdf8;
-        border: 1px solid #ded7c8;
-        border-radius: 1.5rem;
-        box-shadow: 0 1rem 3rem rgb(23 51 45 / 10%);
-      }
-
-      p {
-        margin: 0;
-        color: #527168;
-        line-height: 1.7;
-      }
-
-      .eyebrow {
-        margin-bottom: 1rem;
-        color: #bb5a3c;
-        font-size: 0.8rem;
-        font-weight: 700;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-      }
-
-      h1 {
-        max-width: 10ch;
-        margin: 0 0 1.25rem;
-        font-family: Georgia, "Times New Roman", serif;
-        font-size: clamp(2.8rem, 10vw, 5.5rem);
-        font-weight: 500;
-        line-height: 0.95;
-        letter-spacing: -0.04em;
-      }
-
-      .status {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.65rem;
-        margin-top: 2rem;
-        font-size: 0.9rem;
-        font-weight: 600;
-      }
-
-      .status::before {
-        width: 0.65rem;
-        height: 0.65rem;
-        content: "";
-        background: #bb5a3c;
-        border-radius: 50%;
-      }
-    </style>
+    <link rel="stylesheet" href="css/trips.css">
   </head>
   <body>
-    <main>
+    <main class="card">
       <p class="eyebrow">Cuaderno de viajes</p>
       <h1>¿Dónde vamos ahora?</h1>
       <p>

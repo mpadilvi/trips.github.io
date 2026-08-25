@@ -8,9 +8,30 @@ viaje.
 
 ```text
 .
-├── index.html   # Portada del sitio
-├── README.md    # Documentación del proyecto
-└── .gitignore   # Archivos que Git no debe versionar
+├── css/
+│   └── trips.css  # Variables, estilos base y componentes reutilizables
+├── index.html     # Portada del sitio
+├── README.md      # Documentación del proyecto
+└── .gitignore     # Archivos que Git no debe versionar
+```
+
+## Biblioteca CSS
+
+`css/trips.css` contiene la paleta cromática, variables semánticas, estilos base y
+componentes compartidos. Para utilizarla en una página:
+
+```html
+<link rel="stylesheet" href="css/trips.css">
+```
+
+La paleta inicial está disponible mediante estas variables:
+
+```css
+var(--ink-black)
+var(--deep-space-blue)
+var(--blue-slate)
+var(--dusty-denim)
+var(--eggshell)
 ```
 
 ## Ver el sitio en local
