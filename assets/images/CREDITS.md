@@ -20,6 +20,14 @@
   Berlin Wall (15927158782)*. Wikimedia Commons, licencia CC BY 2.0.
   <https://commons.wikimedia.org/wiki/File:East_Side_Gallery,_Berlin_Wall_(15927158782).jpg>
   · <https://creativecommons.org/licenses/by/2.0/>
+- `paris-eiffel.jpg`: **Paulina Lordméndez**, *Eiffel Tower sunset*.
+  Wikimedia Commons, licencia CC BY-SA 4.0.
+  <https://commons.wikimedia.org/wiki/File:Eiffel_Tower_sunset.jpg>
+  · <https://creativecommons.org/licenses/by-sa/4.0/>
+- `paris-versailles.jpg`: **Groume**, *Panorama Palace of Versailles*.
+  Wikimedia Commons, licencia CC BY-SA 2.0.
+  <https://commons.wikimedia.org/wiki/File:Panorama_Palace_of_Versailles.jpg>
+  · <https://creativecommons.org/licenses/by-sa/2.0/>
 
 Las imágenes se muestran recortadas mediante CSS, sin alterar los archivos
 originales.
