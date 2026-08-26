@@ -1,4 +1,8 @@
-const FALLBACK_RATE = 362.55;
+const currencyConfig = document.body?.dataset || {};
+const CURRENCY_CODE = currencyConfig.currencyCode || "HUF";
+const CURRENCY_LABEL = currencyConfig.currencyLabel || (CURRENCY_CODE === "HUF" ? "Ft" : CURRENCY_CODE);
+const FALLBACK_RATE = Number(currencyConfig.fallbackRate) || 362.55;
+const FALLBACK_DATE = currencyConfig.fallbackDate || "24 ago 2026";
 let currentRate = FALLBACK_RATE;
 
 const formatEur = (value) => new Intl.NumberFormat("es-ES", {
@@ -7,22 +11,22 @@ const formatEur = (value) => new Intl.NumberFormat("es-ES", {
   minimumFractionDigits: 2,
 }).format(value);
 
-const formatHuf = (value) => new Intl.NumberFormat("es-ES", {
+const formatLocal = (value) => new Intl.NumberFormat("es-ES", {
   maximumFractionDigits: 0,
 }).format(value);
 
 function updateConvertedPrices(rate) {
-  document.querySelectorAll("[data-huf]").forEach((element) => {
-    const huf = Number(element.dataset.huf);
-    element.textContent = `${formatHuf(huf)} Ft · ${formatEur(huf / rate)}`;
+  document.querySelectorAll("[data-local], [data-huf]").forEach((element) => {
+    const local = Number(element.dataset.local ?? element.dataset.huf);
+    element.textContent = `${formatLocal(local)} ${CURRENCY_LABEL} · ${formatEur(local / rate)}`;
   });
 
-  document.querySelectorAll("[data-huf-total]").forEach((element) => {
-    const huf = Number(element.dataset.hufTotal);
-    element.textContent = `${formatHuf(huf)} Ft · ${formatEur(huf / rate)}`;
+  document.querySelectorAll("[data-local-total], [data-huf-total]").forEach((element) => {
+    const local = Number(element.dataset.localTotal ?? element.dataset.hufTotal);
+    element.textContent = `${formatLocal(local)} ${CURRENCY_LABEL} · ${formatEur(local / rate)}`;
     const groupText = element.nextElementSibling;
     if (groupText) {
-      groupText.textContent = `por persona · ${formatHuf(huf * 3)} Ft / ${formatEur((huf * 3) / rate)} el grupo`;
+      groupText.textContent = `por persona · ${formatLocal(local * 3)} ${CURRENCY_LABEL} / ${formatEur((local * 3) / rate)} el grupo`;
     }
   });
 }
@@ -31,28 +35,28 @@ async function loadExchangeRate() {
   const status = document.querySelector("#fx-status");
   if (!status) return;
   try {
-    const response = await fetch("https://api.frankfurter.app/latest?from=EUR&to=HUF");
+    const response = await fetch(`https://api.frankfurter.app/latest?from=EUR&to=${CURRENCY_CODE}`);
     if (!response.ok) throw new Error("Respuesta no válida");
     const data = await response.json();
-    currentRate = Number(data.rates.HUF);
+    currentRate = Number(data.rates[CURRENCY_CODE]);
     updateConvertedPrices(currentRate);
-    status.textContent = `1 € = ${currentRate.toLocaleString("es-ES")} Ft · BCE, ${new Date(data.date).toLocaleDateString("es-ES")}.`;
+    status.textContent = `1 € = ${currentRate.toLocaleString("es-ES")} ${CURRENCY_LABEL} · BCE, ${new Date(data.date).toLocaleDateString("es-ES")}.`;
     syncConverter("eur");
   } catch (error) {
-    status.textContent = "Sin conexión: se usa 1 € = 362,55 Ft (BCE, 24 ago 2026).";
+    status.textContent = `Sin conexión: se usa 1 € = ${FALLBACK_RATE.toLocaleString("es-ES")} ${CURRENCY_LABEL} (BCE, ${FALLBACK_DATE}).`;
     updateConvertedPrices(FALLBACK_RATE);
   }
 }
 
 function syncConverter(source) {
   const eurInput = document.querySelector("#eur-input");
-  const hufInput = document.querySelector("#huf-input");
-  if (!eurInput || !hufInput) return;
+  const localInput = document.querySelector("#local-input, #huf-input");
+  if (!eurInput || !localInput) return;
 
   if (source === "eur") {
-    hufInput.value = Math.round((Number(eurInput.value) || 0) * currentRate);
+    localInput.value = Math.round((Number(eurInput.value) || 0) * currentRate);
   } else {
-    eurInput.value = ((Number(hufInput.value) || 0) / currentRate).toFixed(2);
+    eurInput.value = ((Number(localInput.value) || 0) / currentRate).toFixed(2);
   }
 }
 
@@ -184,7 +188,7 @@ function setupRouteTabs() {
 document.addEventListener("DOMContentLoaded", () => {
   updateConvertedPrices(FALLBACK_RATE);
   document.querySelector("#eur-input")?.addEventListener("input", () => syncConverter("eur"));
-  document.querySelector("#huf-input")?.addEventListener("input", () => syncConverter("huf"));
+  document.querySelector("#local-input, #huf-input")?.addEventListener("input", () => syncConverter("local"));
   loadExchangeRate();
   loadWeather();
   setupMaps();

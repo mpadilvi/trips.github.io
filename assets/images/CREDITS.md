@@ -36,6 +36,14 @@
   público (CC0).
   <https://commons.wikimedia.org/wiki/File:Como_Lake1.jpg>
   · <https://creativecommons.org/publicdomain/zero/1.0/>
+- `stockholm-gamla-stan.jpg`: **Acediscovery**, *Stockholm-Gamla-Stan-
+  panorama*. Wikimedia Commons, licencia CC BY 4.0.
+  <https://commons.wikimedia.org/wiki/File:Stockholm-Gamla-Stan-panorama.jpg>
+  · <https://creativecommons.org/licenses/by/4.0/>
+- `stockholm-uppsala.jpg`: **Ad Meskens**, *Uppsala Cathedral 05*.
+  Wikimedia Commons, licencia CC BY-SA 4.0.
+  <https://commons.wikimedia.org/wiki/File:Uppsala_Cathedral_05.jpg>
+  · <https://creativecommons.org/licenses/by-sa/4.0/>
 
 Las imágenes se muestran recortadas mediante CSS, sin alterar los archivos
 originales.
