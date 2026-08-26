@@ -29,6 +29,7 @@ function updateConvertedPrices(rate) {
 
 async function loadExchangeRate() {
   const status = document.querySelector("#fx-status");
+  if (!status) return;
   try {
     const response = await fetch("https://api.frankfurter.app/latest?from=EUR&to=HUF");
     if (!response.ok) throw new Error("Respuesta no válida");
@@ -79,7 +80,16 @@ async function loadWeather() {
   const container = document.querySelector("#weather-days");
   if (!status || !container) return;
 
-  const url = "https://api.open-meteo.com/v1/forecast?latitude=47.4979&longitude=19.0402&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max&timezone=Europe%2FBudapest&start_date=2026-09-11&end_date=2026-09-14";
+  const page = document.body.dataset;
+  const params = new URLSearchParams({
+    latitude: page.weatherLat || "47.4979",
+    longitude: page.weatherLon || "19.0402",
+    daily: "weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max",
+    timezone: page.weatherTimezone || "Europe/Budapest",
+    start_date: page.weatherStart || "2026-09-11",
+    end_date: page.weatherEnd || "2026-09-14",
+  });
+  const url = `https://api.open-meteo.com/v1/forecast?${params}`;
   try {
     const response = await fetch(url);
     if (!response.ok) throw new Error("Fuera del horizonte disponible");

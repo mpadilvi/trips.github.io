@@ -429,6 +429,10 @@ nav a {
   transition: transform 160ms ease, box-shadow 160ms ease;
 }
 
+.destination-card + .destination-card {
+  margin-top: 1.25rem;
+}
+
 .destination-card:hover {
   color: var(--color-text);
   box-shadow: var(--shadow-card);

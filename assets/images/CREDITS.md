@@ -12,6 +12,14 @@
   Hungary*. Wikimedia Commons, licencia CC BY-SA 4.0.
   <https://commons.wikimedia.org/wiki/File:The_Main_Square,_Szentendre,_Hungary.JPG>
   · <https://creativecommons.org/licenses/by-sa/4.0/>
+- `berlin-brandenburg.jpg`: **Olad Aden**, *Brandenburg gate @ night*.
+  Wikimedia Commons, licencia CC BY-SA 4.0.
+  <https://commons.wikimedia.org/wiki/File:Brandenburg_gate_%40_night.jpg>
+  · <https://creativecommons.org/licenses/by-sa/4.0/>
+- `berlin-east-side-gallery.jpg`: **Tony Webster**, *East Side Gallery,
+  Berlin Wall (15927158782)*. Wikimedia Commons, licencia CC BY 2.0.
+  <https://commons.wikimedia.org/wiki/File:East_Side_Gallery,_Berlin_Wall_(15927158782).jpg>
+  · <https://creativecommons.org/licenses/by/2.0/>
 
 Las imágenes se muestran recortadas mediante CSS, sin alterar los archivos
 originales.
