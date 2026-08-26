@@ -362,6 +362,27 @@
   backdrop-filter: blur(0.8rem);
 }
 
+.mobility-note {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+  padding: 1.1rem 1.25rem;
+  background: var(--pale-denim);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-medium);
+}
+
+.mobility-note p {
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.mobility-note a {
+  color: var(--deep-space-blue);
+  font-weight: 750;
+}
+
 .route-tabs {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -553,6 +574,33 @@
   font-family: var(--font-serif);
   font-size: 1.45rem;
   font-weight: 500;
+}
+
+.day-mobility {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin: -0.75rem 0 1.25rem;
+}
+
+.day-mobility strong,
+.day-mobility span {
+  padding: 0.38rem 0.58rem;
+  font-family: var(--font-numeric);
+  font-size: 0.72rem;
+  font-variant-numeric: lining-nums tabular-nums;
+  line-height: 1.25;
+  border-radius: 999px;
+}
+
+.day-mobility strong {
+  color: var(--eggshell);
+  background: var(--deep-space-blue);
+}
+
+.day-mobility span {
+  color: var(--color-text);
+  background: var(--pale-denim);
 }
 
 .timeline {
@@ -1018,6 +1066,10 @@
 
   .traveler-nuance-wide {
     grid-column: auto;
+  }
+
+  .mobility-note {
+    grid-template-columns: 1fr;
   }
 
   .visa-summary {

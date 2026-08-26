@@ -14,9 +14,10 @@ viaje.
 │   ├── trips.css       # Variables, estilos base y componentes reutilizables
 │   └── destination.css # Componentes de las guías de destino
 ├── destinations/
-│   └── budapest.html   # Página piloto de Budapest
+│   └── budapest.html   # Primera página de destino: Budapest
 ├── js/
 │   └── destination.js  # Cambio, previsión meteorológica y mapas
+├── DESTINATION_PAGE_PLAYBOOK.md # Requisitos reutilizables de cada destino
 ├── index.html     # Portada del sitio
 ├── README.md      # Documentación del proyecto
 └── .gitignore     # Archivos que Git no debe versionar
