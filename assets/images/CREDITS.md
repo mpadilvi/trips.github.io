@@ -28,6 +28,14 @@
   Wikimedia Commons, licencia CC BY-SA 2.0.
   <https://commons.wikimedia.org/wiki/File:Panorama_Palace_of_Versailles.jpg>
   · <https://creativecommons.org/licenses/by-sa/2.0/>
+- `milan-duomo.jpg`: **Collafilms**, *Milan-duomo*. Wikimedia Commons,
+  dominio público (CC0).
+  <https://commons.wikimedia.org/wiki/File:Milan-duomo.jpg>
+  · <https://creativecommons.org/publicdomain/zero/1.0/>
+- `milan-como.jpg`: **Daath3**, *Como Lake1*. Wikimedia Commons, dominio
+  público (CC0).
+  <https://commons.wikimedia.org/wiki/File:Como_Lake1.jpg>
+  · <https://creativecommons.org/publicdomain/zero/1.0/>
 
 Las imágenes se muestran recortadas mediante CSS, sin alterar los archivos
 originales.
