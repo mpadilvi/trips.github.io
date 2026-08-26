@@ -31,6 +31,7 @@ These facts apply to the current Waynabox trip and should be reused across all c
 | Luggage | Standard included personal bag/backpack |
 | Extras | No additional services purchased |
 | Local mobility | Walking and public transport |
+| Destination reveal | 48 hours before departure |
 
 The airport, exact flight times and hotel remain unknown until Waynabox reveals the booking. Friday and Monday plans must therefore be conditional and must not require non-refundable advance tickets unless the timing is safe.
 
@@ -114,6 +115,29 @@ Until the hotel and airport are known, explicitly exclude:
 Recalculate all totals after Waynabox reveals the hotel and flights. Verify the final public-transport plan against the local operator's official journey planner shortly before travel.
 
 ## 6. Tickets, passes and budgets
+
+### Mandatory 48-hour ticket-feasibility audit
+
+Waynabox reveals the destination only 48 hours before departure. Every proposed attraction must therefore be checked not only for its opening hours and price, but also for whether three tickets can realistically be obtained after the reveal.
+
+Classify ticketed stops before treating them as part of a route:
+
+- **Green — viable:** walk-up admission is normal, the venue explicitly sells tickets on site, or live official inventory shows adequate availability close to the date.
+- **Amber — uncertain:** a timed slot is required or advance purchase is recommended, but an official same-day channel or a reasonable chance of late availability exists. Keep it only with a named, geographically sensible fallback in the same time block.
+- **Red — not viable as an anchor:** sales opened well before the reveal, the attraction is already sold out for the exact dates/group size, there is no official door sale or waiting list, or the only remaining option is an expensive/unverifiable intermediary. Keep the place only as an exterior view or contextual mention and schedule another visit instead.
+
+For this audit:
+
+- Check the official ticket inventory for the exact 2026 date and three people whenever the interface allows it.
+- Record release schedules, mandatory booking, door-sale rules, waiting-list rules and refund/change conditions.
+- Never assume that a ticket will reappear and never recommend an unofficial reseller as the solution.
+- Do not ask the user to buy speculative non-refundable tickets for several candidate destinations before the reveal.
+- Put the guaranteed or most realistic visit in the main timeline. Describe a scarce ticket as an optional upgrade only after three official places are confirmed.
+- Keep route budgets free of red-status tickets. Show the extra cost separately when an amber visit is an optional upgrade.
+- Preserve the original landmark as an exterior stop or short mention when it remains important for understanding the destination.
+- Re-run the official availability check immediately after the destination is revealed and before changing the route.
+
+The page should contain a visible, concise ticket-feasibility note naming the fragile attractions and their replacements. A generic warning such as “book early” is not enough.
 
 For every destination:
 
@@ -295,5 +319,6 @@ A destination page is ready for review when:
 - Photos are optimised, accessible and credited.
 - The 320 px layout remains readable and navigable.
 - Volatile facts have a review date and official sources.
+- Every paid or timed attraction has passed the 48-hour feasibility audit; red-status attractions are exterior/context only and amber ones have a concrete fallback.
 - Unknowns and conditional plans are clearly labelled.
 - `git diff --check` passes.

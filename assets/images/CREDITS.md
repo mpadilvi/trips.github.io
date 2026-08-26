@@ -47,3 +47,16 @@
 
 Las imágenes se muestran recortadas mediante CSS, sin alterar los archivos
 originales.
+# London
+
+- `london-thames.jpg` — “London South Bank skyline across the River Thames, featuring The Shard and HMS Belfast” by Oleg Yunakov, licensed under CC BY-SA 4.0. Source: https://commons.wikimedia.org/wiki/File:London_South_Bank_skyline_across_the_River_Thames,_featuring_The_Shard_and_HMS_Belfast.jpg
+- `london-windsor.jpg` — “Windsor castle.jpg” by aparshah_18, licensed under CC BY-SA 3.0. Source: https://commons.wikimedia.org/wiki/File:Windsor_castle.jpg
+# Ámsterdam
+
+- `amsterdam-canals.jpg`: “Amsterdam - Canal houses (3415274829)” — Ernest McGray, Jr. — [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Amsterdam_-_Canal_houses_(3415274829).jpg) — CC BY-SA 2.0.
+- `amsterdam-zaanse.jpg`: “Windmills Zaanse Schans” — Peter K Burian — [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Windmills_Zaanse_Schans.jpg) — CC BY-SA 4.0.
+
+# Roma
+
+- `rome-colosseum.jpg`: “Rome Colosseum exterior panorama” — Nicholas Hartmann — [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Rome_Colosseum_exterior_panorama.jpg) — CC BY-SA 4.0.
+- `rome-ostia.jpg`: “Roma - Parco archeologico di Ostia antica - scavi di Ostia antica e Museo Ostiense - 2024-09-26 12-39-23 001” — A. Pennello — [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Roma_-_Parco_archeologico_di_Ostia_antica_-_scavi_di_Ostia_antica_e_Museo_Ostiense_-_2024-09-26_12-39-23_001.jpg) — CC BY-SA 4.0.

@@ -1,6 +1,9 @@
 const currencyConfig = document.body?.dataset || {};
 const CURRENCY_CODE = currencyConfig.currencyCode || "HUF";
 const CURRENCY_LABEL = currencyConfig.currencyLabel || (CURRENCY_CODE === "HUF" ? "Ft" : CURRENCY_CODE);
+const CURRENCY_POSITION = currencyConfig.currencyPosition || "suffix";
+const parsedCurrencyDecimals = Number(currencyConfig.currencyDecimals);
+const CURRENCY_DECIMALS = Number.isInteger(parsedCurrencyDecimals) ? parsedCurrencyDecimals : 0;
 const FALLBACK_RATE = Number(currencyConfig.fallbackRate) || 362.55;
 const FALLBACK_DATE = currencyConfig.fallbackDate || "24 ago 2026";
 let currentRate = FALLBACK_RATE;
@@ -12,21 +15,26 @@ const formatEur = (value) => new Intl.NumberFormat("es-ES", {
 }).format(value);
 
 const formatLocal = (value) => new Intl.NumberFormat("es-ES", {
-  maximumFractionDigits: 0,
+  minimumFractionDigits: CURRENCY_DECIMALS,
+  maximumFractionDigits: CURRENCY_DECIMALS,
 }).format(value);
+
+const displayLocal = (value) => CURRENCY_POSITION === "prefix"
+  ? `${CURRENCY_LABEL}${formatLocal(value)}`
+  : `${formatLocal(value)} ${CURRENCY_LABEL}`;
 
 function updateConvertedPrices(rate) {
   document.querySelectorAll("[data-local], [data-huf]").forEach((element) => {
     const local = Number(element.dataset.local ?? element.dataset.huf);
-    element.textContent = `${formatLocal(local)} ${CURRENCY_LABEL} · ${formatEur(local / rate)}`;
+    element.textContent = `${displayLocal(local)} · ${formatEur(local / rate)}`;
   });
 
   document.querySelectorAll("[data-local-total], [data-huf-total]").forEach((element) => {
     const local = Number(element.dataset.localTotal ?? element.dataset.hufTotal);
-    element.textContent = `${formatLocal(local)} ${CURRENCY_LABEL} · ${formatEur(local / rate)}`;
+    element.textContent = `${displayLocal(local)} · ${formatEur(local / rate)}`;
     const groupText = element.nextElementSibling;
     if (groupText) {
-      groupText.textContent = `por persona · ${formatLocal(local * 3)} ${CURRENCY_LABEL} / ${formatEur((local * 3) / rate)} el grupo`;
+      groupText.textContent = `por persona · ${displayLocal(local * 3)} / ${formatEur((local * 3) / rate)} el grupo`;
     }
   });
 }
@@ -54,7 +62,7 @@ function syncConverter(source) {
   if (!eurInput || !localInput) return;
 
   if (source === "eur") {
-    localInput.value = Math.round((Number(eurInput.value) || 0) * currentRate);
+    localInput.value = ((Number(eurInput.value) || 0) * currentRate).toFixed(CURRENCY_DECIMALS);
   } else {
     eurInput.value = ((Number(localInput.value) || 0) / currentRate).toFixed(2);
   }
