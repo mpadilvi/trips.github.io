@@ -254,6 +254,18 @@ For every new destination:
 9. Check day-trip travel time using public transport, not straight-line distance.
 10. Record the date on which volatile information was reviewed.
 
+### Huelgas, obras y fechas especiales
+
+For the exact travel dates, every destination must also include a visible disruption audit covering:
+
+- Announced strikes affecting urban transport, national rail, airports or major visitor services.
+- Planned engineering works, line closures, replacement buses and event-related diversions that affect an itinerary or day trip.
+- Public holidays, religious observances, elections, festivals, races, demonstrations and major concerts that may alter opening hours, access, crowd levels or street transport.
+- A concrete route change when a confirmed disruption makes the original transport plan unreliable; a generic “check before travelling” warning is not enough when an official alternative is already known.
+- Official status and event links, the date of the check and a clear distinction between confirmed disruption and a reasonable risk inferred from a large event.
+
+“No strike announced” is a dated status, not a guarantee. Recheck the relevant operator and national strike calendar when Waynabox reveals the destination on 9 September, again 48 hours before each affected journey and on the day of travel. Cancelled or newly announced action must be reflected in the itinerary rather than left only in the research note.
+
 If official information is missing, conflicting or only available through an inaccessible interface:
 
 - Say what is uncertain.
@@ -303,6 +315,7 @@ Do not copy these into another destination without fresh research:
 - Currency: Hungarian forint (HUF).
 - Spanish citizens do not need a visa for Hungary; valid DNI or passport is sufficient.
 - The Great Synagogue is closed on 11, 12 and 13 September 2026.
+- The Budapest Wine Festival occupies restricted courtyards of Buda Castle from 9 to 12 September 2026; museum visitors use the access point at Szent György tér and receive a passage wristband.
 - The current transport comparison favours a monthly Budapest pass plus 100E supplements under the route assumptions used on the page.
 - The current day trip is Szentendre using suburban railway H5.
 - Széchenyi's specified on-site entrance accepts bank-card payment only.
@@ -310,7 +323,14 @@ Do not copy these into another destination without fresh research:
 - The historical weather cards use Open-Meteo data from 2016–2025.
 - Current walking ranges exclude the unknown hotel and airport journeys.
 
-## 16. Definition of done for a new destination
+## 16. Pending disruption notes for unbuilt destinations
+
+These notes prevent verified date-specific information from being lost, but they are not a substitute for the complete audit required when each page is built:
+
+- **Lyon:** TCL has confirmed Metro D engineering work from 14 September 2026. On Mondays and Tuesdays from about 21:30, trains only run between Gare de Vaise and Grange Blanche; replacement buses serve Grange Blanche–Gare de Vénissieux. This affects only a late journey on the final day under the current trip dates, but the flight time and hotel are still unknown. Recheck the [official TCL works notice](https://www.tcl.fr/se-deplacer/travaux-en-cours-sur-le-reseau-tcl/perturbations-des-lignes-de-metro/metro-D) when building the route.
+- **Prague:** DPP currently lists a tram closure between Olšanské náměstí and Nákladové nádraží Žižkov through 10 October 2026, affecting lines 5, 9, 26, 34 and 95. Prague City Tourism also lists Czech Design Week (10–13 September) and several harvest, wine and market events on 11–13 September. Use the [official DPP disruption list](https://www.dpp.cz/en/restrictions-and-emergencies) and [official Prague events calendar](https://prague.eu/en/akce-kategorie/events/) when the page is created; exact itinerary impact remains to be assessed.
+
+## 17. Definition of done for a new destination
 
 A destination page is ready for review when:
 
@@ -327,5 +347,6 @@ A destination page is ready for review when:
 - The 320 px layout remains readable and navigable.
 - Volatile facts have a review date and official sources.
 - Every paid or timed attraction has passed the 48-hour feasibility audit; red-status attractions are exterior/context only and amber ones have a concrete fallback.
+- Announced strikes, planned transport works and date-specific events have been checked, linked and incorporated into the route where they alter access or timing.
 - Unknowns and conditional plans are clearly labelled.
 - `git diff --check` passes.
