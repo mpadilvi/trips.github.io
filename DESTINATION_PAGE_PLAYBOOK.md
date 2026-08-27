@@ -2,7 +2,7 @@
 
 This document records the requirements and decisions established while building Budapest, the first completed destination page. Use it as the working brief for every future destination page in this repository.
 
-Last consolidated: 26 August 2026.
+Last consolidated: 27 August 2026.
 
 ## 1. Working rules
 
@@ -148,7 +148,14 @@ For every destination:
 - Show all prices in local currency and EUR when applicable.
 - Identify eligibility assumptions, especially EU/EEA versus non-EU prices, age discounts and required identity documents.
 - Give per-person and three-person group totals where they improve planning.
-- Keep ticket prices separate from food budgets unless a combined total is explicitly labelled.
+- Show two clearly labelled budget figures for every itinerary:
+  - **Necessary base spend:** the paid visits that sustain the route, the best-value public-transport option required by that route and any unavoidable paid entry formality such as a UK ETA. Exclude flight, hotel, tourist tax and airport-to-hotel transport.
+  - **Realistic trip total:** a range that adds four days of food, small everyday expenses, variable transport fares and sensible optional upgrades. Its upper end should reflect the expensive optional visit that could materially change the trip.
+- Show both figures per person and for the group of three. When the destination does not use EUR, show local currency and EUR and connect both to the live exchange-rate updater.
+- Do not put a conditional Monday attraction in the necessary base spend. Include it only in the realistic upper range until the return flight leaves enough time.
+- When a train fare, dynamic admission or hotel-issued transport card cannot be fixed before the reveal, use a transparent range or conditional scenario and identify exactly what must be checked on 9 September.
+- State the transport product or pay-as-you-go strategy included in each base calculation. Do not silently count airport coverage merely because the same pass happens to provide it.
+- Keep the existing food-only estimate visible as supporting context, but never present it as the complete trip total.
 
 ## 7. Money and payment nuances
 

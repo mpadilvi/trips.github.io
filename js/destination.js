@@ -37,6 +37,16 @@ function updateConvertedPrices(rate) {
       groupText.textContent = `por persona · ${displayLocal(local * 3)} / ${formatEur((local * 3) / rate)} el grupo`;
     }
   });
+
+  document.querySelectorAll("[data-local-range-min][data-local-range-max]").forEach((element) => {
+    const minimum = Number(element.dataset.localRangeMin);
+    const maximum = Number(element.dataset.localRangeMax);
+    element.textContent = `${displayLocal(minimum)}–${displayLocal(maximum)} · ${formatEur(minimum / rate)}–${formatEur(maximum / rate)}`;
+    const groupText = element.nextElementSibling;
+    if (groupText) {
+      groupText.textContent = `por persona · ${displayLocal(minimum * 3)}–${displayLocal(maximum * 3)} / ${formatEur((minimum * 3) / rate)}–${formatEur((maximum * 3) / rate)} el grupo`;
+    }
+  });
 }
 
 async function loadExchangeRate() {
