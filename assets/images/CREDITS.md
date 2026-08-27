@@ -60,3 +60,13 @@ originales.
 
 - `rome-colosseum.jpg`: “Rome Colosseum exterior panorama” — Nicholas Hartmann — [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Rome_Colosseum_exterior_panorama.jpg) — CC BY-SA 4.0.
 - `rome-ostia.jpg`: “Roma - Parco archeologico di Ostia antica - scavi di Ostia antica e Museo Ostiense - 2024-09-26 12-39-23 001” — A. Pennello — [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Roma_-_Parco_archeologico_di_Ostia_antica_-_scavi_di_Ostia_antica_e_Museo_Ostiense_-_2024-09-26_12-39-23_001.jpg) — CC BY-SA 4.0.
+
+# Ginebra
+
+- `geneva-lake.jpg`: “Lake Geneva panorama” — Tiia Monto — [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Lake_Geneva_panorama.jpg) — CC BY-SA 3.0.
+- `geneva-old-town.jpg`: “Geneva Panorama from St. Pierre” — MarsPF2 — [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Geneva_Panorama_from_St._Pierre.jpg) — CC BY-SA 3.0.
+
+# Basilea
+
+- `basel-rhine.jpg`: “Panoramic of Basel from Münster terrace” — MartinD — [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Panoramic_of_Basel_from_M%C3%BCnster_terrace.jpg) — CC BY-SA 4.0.
+- `basel-augusta.jpg`: “2014-Augst-Augusta-Raurica-Theater” — Roland Zumbuehl — [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:2014-Augst-Augusta-Raurica-Theater.jpg) — CC BY 3.0.

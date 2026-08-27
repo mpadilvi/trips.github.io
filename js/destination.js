@@ -195,6 +195,7 @@ function setupRouteTabs() {
 
 document.addEventListener("DOMContentLoaded", () => {
   updateConvertedPrices(FALLBACK_RATE);
+  syncConverter("eur");
   document.querySelector("#eur-input")?.addEventListener("input", () => syncConverter("eur"));
   document.querySelector("#local-input, #huf-input")?.addEventListener("input", () => syncConverter("local"));
   loadExchangeRate();
