@@ -70,3 +70,23 @@ originales.
 
 - `basel-rhine.jpg`: “Panoramic of Basel from Münster terrace” — MartinD — [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Panoramic_of_Basel_from_M%C3%BCnster_terrace.jpg) — CC BY-SA 4.0.
 - `basel-augusta.jpg`: “2014-Augst-Augusta-Raurica-Theater” — Roland Zumbuehl — [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:2014-Augst-Augusta-Raurica-Theater.jpg) — CC BY 3.0.
+
+# Mánchester
+
+- `manchester-rylands.jpg`: “John Rylands Library from Deansgate, Manchester” — Bernard Randall — [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:John_Rylands_Library_from_Deansgate,_Manchester.jpg) — CC BY-SA 3.0.
+- `manchester-castlefield.jpg`: “Castlefield Canals and Bridges, Manchester” — Heikki Immonen — [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Castlefield_Canals_and_Bridges,_Manchester_-_panoramio.jpg) — CC BY 3.0.
+
+# Bristol
+
+- `bristol-clifton.jpg`: “Clifton Suspension Bridge Bristol” — Lacu Schienred — [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Clifton_Suspension_Bridge_Bristol.jpg) — CC BY-SA 4.0.
+- `bristol-harbour.jpg`: “View of coloured houses on Argyle Place-Cliftonwood Crescent from the deck of the SS Great Britain” — Robert Lamb — [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:View_of_coloured_houses_on_Argyle_Place-Cliftonwood_Crescent_from_the_deck_of_the_SS_Great_Britain_-_geograph.org.uk_-_7678363.jpg) — CC BY-SA 2.0.
+
+# Venecia
+
+- `venice-canal.jpg`: “View of the Grand Canal from Rialto to Ca'Foscari” — Didier Descouens — [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:View_of_the_Grand_Canal_from_Rialto_to_Ca%27Foscari.jpg) — CC BY-SA 4.0.
+- `venice-burano.jpg`: “Burano - Venezia” — Alstersegler — [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Burano_-_Venezia.jpg) — CC BY-SA 4.0.
+
+# Bolonia
+
+- `bologna-piazza.jpg`: “Piazza Maggiore -- Bologna” — Vanni Lazzari — [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Piazza_Maggiore_--_Bologna.jpg) — CC BY-SA 4.0.
+- `bologna-portico.jpg`: “Portico di San Luca - Bologna” — Vanni Lazzari — [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Portico_di_San_Luca_-_Bologna.jpg) — CC BY-SA 4.0.
