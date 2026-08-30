@@ -323,14 +323,7 @@ Do not copy these into another destination without fresh research:
 - The historical weather cards use Open-Meteo data from 2016–2025.
 - Current walking ranges exclude the unknown hotel and airport journeys.
 
-## 16. Pending disruption notes for unbuilt destinations
-
-These notes prevent verified date-specific information from being lost, but they are not a substitute for the complete audit required when each page is built:
-
-- **Lyon:** TCL has confirmed Metro D engineering work from 14 September 2026. On Mondays and Tuesdays from about 21:30, trains only run between Gare de Vaise and Grange Blanche; replacement buses serve Grange Blanche–Gare de Vénissieux. This affects only a late journey on the final day under the current trip dates, but the flight time and hotel are still unknown. Recheck the [official TCL works notice](https://www.tcl.fr/se-deplacer/travaux-en-cours-sur-le-reseau-tcl/perturbations-des-lignes-de-metro/metro-D) when building the route.
-- **Prague:** DPP currently lists a tram closure between Olšanské náměstí and Nákladové nádraží Žižkov through 10 October 2026, affecting lines 5, 9, 26, 34 and 95. Prague City Tourism also lists Czech Design Week (10–13 September) and several harvest, wine and market events on 11–13 September. Use the [official DPP disruption list](https://www.dpp.cz/en/restrictions-and-emergencies) and [official Prague events calendar](https://prague.eu/en/akce-kategorie/events/) when the page is created; exact itinerary impact remains to be assessed.
-
-## 17. Definition of done for a new destination
+## 16. Definition of done for a new destination
 
 A destination page is ready for review when:
 

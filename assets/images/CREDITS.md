@@ -90,3 +90,13 @@ originales.
 
 - `bologna-piazza.jpg`: “Piazza Maggiore -- Bologna” — Vanni Lazzari — [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Piazza_Maggiore_--_Bologna.jpg) — CC BY-SA 4.0.
 - `bologna-portico.jpg`: “Portico di San Luca - Bologna” — Vanni Lazzari — [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Portico_di_San_Luca_-_Bologna.jpg) — CC BY-SA 4.0.
+
+# Lyon
+
+- `lyon-panorama.jpg`: “Panoramic view of Lyon from Fourvière” — Matteo Frigo — [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Panoramic_view_of_Lyon_from_Fourvi%C3%A8re.jpg) — CC BY-SA 4.0.
+- `lyon-vienne.jpg`: “Vienne, théâtre antique” — Eagertourist — [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Vienne,_th%C3%A9%C3%A2tre_antique.jpg) — CC0 1.0.
+
+# Praga
+
+- `prague-charles.jpg`: “Prague Castle from Charles Bridge panorama” — Janmad — [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Prague_Castle_from_Charles_Bridge_panorama.JPG) — CC BY 3.0.
+- `prague-kutna.jpg`: “Kutná Hora, the street ‘Barborská’, view to the cathedral Saint Barbara” — Dguendel — [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Kutn%C3%A1_Hora,_the_street_%22Barborsk%C3%A1%22,_view_to_the_cathedral_Saint_Barbara.jpg) — CC BY 4.0.
