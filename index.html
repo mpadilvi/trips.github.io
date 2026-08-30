@@ -3,318 +3,54 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta
-      name="description"
-      content="Ideas, información práctica e itinerarios para elegir tu próximo destino."
-    >
+    <meta name="description" content="Consulta 16 posibles destinos europeos y prepara el viaje sorpresa del 11 al 14 de septiembre de 2026.">
     <title>Próximos destinos</title>
     <link rel="icon" href="data:,">
-    <link rel="stylesheet" href="css/trips.css?v=5">
+    <link rel="stylesheet" href="css/trips.css?v=6">
+    <script src="js/destinations-data.js?v=1" defer></script>
+    <script src="js/index.js?v=1" defer></script>
   </head>
   <body>
     <header class="site-header container">
-      <a class="brand" href="index.html" aria-label="Inicio de Próximos destinos">
-        <span class="brand-mark" aria-hidden="true">N</span>
-        <span>Próximos destinos</span>
-      </a>
-
-      <nav aria-label="Navegación principal">
-        <a href="#destinos">Destinos</a>
-        <a href="#proyecto">El proyecto</a>
-      </nav>
+      <a class="brand" href="index.html" aria-label="Inicio de Próximos destinos"><span class="brand-mark" aria-hidden="true">N</span><span>Próximos destinos</span></a>
+      <nav aria-label="Navegación principal"><a href="#destinos">Destinos</a><a href="viaje.html">Modo viaje</a></nav>
     </header>
 
     <main>
       <section class="hero container" aria-labelledby="hero-title">
         <div class="hero-copy">
-          <p class="eyebrow">Cuaderno de viajes</p>
+          <p class="eyebrow">Viaje sorpresa · 11–14 sep 2026</p>
           <h1 id="hero-title">¿Dónde vamos ahora?</h1>
-          <p class="hero-intro">
-            Un espacio para descubrir, comparar y preparar posibles destinos sin perder
-            de vista lo que de verdad importa en cada viaje.
-          </p>
-          <a class="button" href="#destinos">Explorar destinos</a>
+          <p class="hero-intro">Dieciséis guías completas para encontrar enseguida el plan correcto cuando se revele el destino.</p>
+          <div class="hero-actions"><a class="button" href="#destinos">Buscar una guía</a><a class="button button-secondary" href="viaje.html">Preparar el 9 de septiembre</a></div>
         </div>
-
-        <div class="hero-visual" aria-hidden="true">
-          <div class="route-line"></div>
-          <span class="route-point route-point-start"></span>
-          <span class="route-point route-point-end"></span>
-          <div class="compass">
-            <span>N</span>
-          </div>
-          <p>El siguiente viaje empieza aquí</p>
-        </div>
+        <div class="hero-visual" aria-hidden="true"><div class="route-line"></div><span class="route-point route-point-start"></span><span class="route-point route-point-end"></span><div class="compass"><span>N</span></div><p>El siguiente viaje empieza aquí</p></div>
       </section>
 
       <section class="destinations-section" id="destinos" aria-labelledby="destinations-title">
         <div class="container">
-          <div class="section-heading">
-            <div>
-              <p class="eyebrow">Elige tu próxima ruta</p>
-              <h2 id="destinations-title">Destinos</h2>
-            </div>
-            <p>
-              Cada destino tendrá su propia guía con la información necesaria para
-              valorar la opción y organizar el viaje.
-            </p>
-          </div>
+          <div class="section-heading"><div><p class="eyebrow">16 guías preparadas</p><h2 id="destinations-title">Destinos</h2></div><p>El presupuesto muestra el intervalo realista por persona de las tres rutas. El clima es la máxima histórica media para estas fechas y los kilómetros corresponden a una jornada completa de sábado o domingo.</p></div>
 
-          <a class="destination-card" href="destinations/amsterdam.html">
-            <div class="destination-card-copy">
-              <p class="status">Guía completa</p>
-              <h3>Ámsterdam</h3>
-              <p>Tres itinerarios para 4 días: arte y canales, patrimonio abierto o excursión a Zaanse Schans.</p>
-              <span class="destination-card-link">Abrir guía <span aria-hidden="true">→</span></span>
-            </div>
-            <div class="destination-card-meta">
-              <span>11–14 sep 2026</span>
-              <span>3 viajeros</span>
-              <span>Transporte público + a pie</span>
-            </div>
-          </a>
+          <form class="destination-toolbar" id="destination-filters" role="search" aria-label="Buscar y filtrar destinos" onsubmit="return false">
+            <label class="filter-search">Buscar destino o excursión<input id="destination-search" type="search" autocomplete="off" placeholder="Ej.: Praga, islas, Bath…"></label>
+            <label>Moneda<select class="destination-filter" id="filter-currency"><option value="">Todas</option><option value="EUR">Euro</option><option value="CHF">Franco suizo</option><option value="GBP">Libra</option><option value="HUF">Florín</option><option value="CZK">Corona checa</option><option value="SEK">Corona sueca</option></select></label>
+            <label>Presupuesto realista<select class="destination-filter" id="filter-budget"><option value="">Todos</option><option value="low">Desde menos de 180 €</option><option value="medium">Desde 180–249 €</option><option value="high">Desde 250 €</option></select></label>
+            <label>Clima histórico<select class="destination-filter" id="filter-climate"><option value="">Todos</option><option value="cool">Fresco · hasta 20 °C</option><option value="mild">Templado · 20–24 °C</option><option value="warm">Cálido · más de 24 °C</option></select></label>
+            <label>Tipo de excursión<select class="destination-filter" id="filter-trip"><option value="">Todos</option><option value="city">Otra ciudad</option><option value="palace">Palacios</option><option value="archaeology">Arqueología</option><option value="landscape">Paisaje y agua</option><option value="islands">Islas</option></select></label>
+            <button class="filter-reset" id="reset-filters" type="button">Restablecer</button>
+          </form>
 
-          <a class="destination-card" href="destinations/basel.html">
-            <div class="destination-card-copy">
-              <p class="status">Guía completa</p>
-              <h3>Basilea</h3>
-              <p>Tres itinerarios para 4 días: casco y arte, papel y mecanismos o excursión a Augusta Raurica.</p>
-              <span class="destination-card-link">Abrir guía <span aria-hidden="true">→</span></span>
-            </div>
-            <div class="destination-card-meta">
-              <span>11–14 sep 2026</span>
-              <span>3 viajeros</span>
-              <span>Transporte público + a pie</span>
-            </div>
-          </a>
-
-          <a class="destination-card" href="destinations/berlin.html">
-            <div class="destination-card-copy">
-              <p class="status">Guía completa</p>
-              <h3>Berlín</h3>
-              <p>Tres itinerarios para 4 días: imprescindibles, memoria y eventos o excursión a Potsdam.</p>
-              <span class="destination-card-link">Abrir guía <span aria-hidden="true">→</span></span>
-            </div>
-            <div class="destination-card-meta">
-              <span>11–14 sep 2026</span>
-              <span>3 viajeros</span>
-              <span>Transporte público + a pie</span>
-            </div>
-          </a>
-
-          <a class="destination-card" href="destinations/bologna.html">
-            <div class="destination-card-copy">
-              <p class="status">Guía completa</p>
-              <h3>Bolonia</h3>
-              <p>Tres itinerarios para 4 días: historia y arte, pórticos y San Luca o excursión a Módena.</p>
-              <span class="destination-card-link">Abrir guía <span aria-hidden="true">→</span></span>
-            </div>
-            <div class="destination-card-meta">
-              <span>11–14 sep 2026</span>
-              <span>3 viajeros</span>
-              <span>Transporte público + a pie</span>
-            </div>
-          </a>
-
-          <a class="destination-card" href="destinations/bristol.html">
-            <div class="destination-card-copy">
-              <p class="status">Guía completa</p>
-              <h3>Bristol</h3>
-              <p>Tres itinerarios para 4 días: puerto y Clifton, arte urbano o excursión a Bath.</p>
-              <span class="destination-card-link">Abrir guía <span aria-hidden="true">→</span></span>
-            </div>
-            <div class="destination-card-meta">
-              <span>11–14 sep 2026</span>
-              <span>3 viajeros</span>
-              <span>Transporte público + a pie</span>
-            </div>
-          </a>
-
-          <a class="destination-card" href="destinations/budapest.html">
-            <div class="destination-card-copy">
-              <p class="status">Primera guía · completa</p>
-              <h3>Budapest</h3>
-              <p>Tres itinerarios para 4 días: imprescindibles, historia o excursión a Szentendre.</p>
-              <span class="destination-card-link">Abrir guía <span aria-hidden="true">→</span></span>
-            </div>
-            <div class="destination-card-meta">
-              <span>11–14 sep 2026</span>
-              <span>3 viajeros</span>
-              <span>Transporte público + a pie</span>
-            </div>
-          </a>
-
-          <a class="destination-card" href="destinations/stockholm.html">
-            <div class="destination-card-copy">
-              <p class="status">Guía completa</p>
-              <h3>Estocolmo</h3>
-              <p>Tres itinerarios para 4 días: imprescindibles, arte y diseño o excursión a Uppsala.</p>
-              <span class="destination-card-link">Abrir guía <span aria-hidden="true">→</span></span>
-            </div>
-            <div class="destination-card-meta">
-              <span>11–14 sep 2026</span>
-              <span>3 viajeros</span>
-              <span>Transporte público + a pie</span>
-            </div>
-          </a>
-
-          <a class="destination-card" href="destinations/geneva.html">
-            <div class="destination-card-copy">
-              <p class="status">Guía completa</p>
-              <h3>Ginebra</h3>
-              <p>Tres itinerarios para 4 días: ciudad internacional, ciencia y relojería o excursión a Lausana.</p>
-              <span class="destination-card-link">Abrir guía <span aria-hidden="true">→</span></span>
-            </div>
-            <div class="destination-card-meta">
-              <span>11–14 sep 2026</span>
-              <span>3 viajeros</span>
-              <span>Transporte público + a pie</span>
-            </div>
-          </a>
-
-          <a class="destination-card" href="destinations/london.html">
-            <div class="destination-card-copy">
-              <p class="status">Guía completa</p>
-              <h3>Londres</h3>
-              <p>Tres itinerarios para 4 días: iconos y museos, barrios y mercados o excursión a Windsor.</p>
-              <span class="destination-card-link">Abrir guía <span aria-hidden="true">→</span></span>
-            </div>
-            <div class="destination-card-meta">
-              <span>11–14 sep 2026</span>
-              <span>3 viajeros</span>
-              <span>Transporte público + a pie</span>
-            </div>
-          </a>
-
-          <a class="destination-card" href="destinations/lyon.html">
-            <div class="destination-card-copy">
-              <p class="status">Guía completa</p>
-              <h3>Lyon</h3>
-              <p>Tres itinerarios para 4 días: Lyon esencial, cine y museos o excursión a la Vienne romana.</p>
-              <span class="destination-card-link">Abrir guía <span aria-hidden="true">→</span></span>
-            </div>
-            <div class="destination-card-meta">
-              <span>11–14 sep 2026</span>
-              <span>3 viajeros</span>
-              <span>Transporte público + a pie</span>
-            </div>
-          </a>
-
-          <a class="destination-card" href="destinations/manchester.html">
-            <div class="destination-card-copy">
-              <p class="status">Guía completa</p>
-              <h3>Mánchester</h3>
-              <p>Tres itinerarios para 4 días: industria y democracia, arte y barrios o excursión a Liverpool.</p>
-              <span class="destination-card-link">Abrir guía <span aria-hidden="true">→</span></span>
-            </div>
-            <div class="destination-card-meta">
-              <span>11–14 sep 2026</span>
-              <span>3 viajeros</span>
-              <span>Transporte público + a pie</span>
-            </div>
-          </a>
-
-          <a class="destination-card" href="destinations/milan.html">
-            <div class="destination-card-copy">
-              <p class="status">Guía completa</p>
-              <h3>Milán</h3>
-              <p>Tres itinerarios para 4 días: imprescindibles, ciencia y diseño o excursión al lago de Como.</p>
-              <span class="destination-card-link">Abrir guía <span aria-hidden="true">→</span></span>
-            </div>
-            <div class="destination-card-meta">
-              <span>11–14 sep 2026</span>
-              <span>3 viajeros</span>
-              <span>Transporte público + a pie</span>
-            </div>
-          </a>
-
-          <a class="destination-card" href="destinations/paris.html">
-            <div class="destination-card-copy">
-              <p class="status">Guía completa</p>
-              <h3>París</h3>
-              <p>Tres itinerarios para 4 días: grandes iconos, barrios e historia o excursión a Versalles.</p>
-              <span class="destination-card-link">Abrir guía <span aria-hidden="true">→</span></span>
-            </div>
-            <div class="destination-card-meta">
-              <span>11–14 sep 2026</span>
-              <span>3 viajeros</span>
-              <span>Transporte público + a pie</span>
-            </div>
-          </a>
-
-          <a class="destination-card" href="destinations/prague.html">
-            <div class="destination-card-copy">
-              <p class="status">Guía completa</p>
-              <h3>Praga</h3>
-              <p>Tres itinerarios para 4 días: iconos esenciales, diseño y memoria o excursión a Kutná Hora.</p>
-              <span class="destination-card-link">Abrir guía <span aria-hidden="true">→</span></span>
-            </div>
-            <div class="destination-card-meta">
-              <span>11–14 sep 2026</span>
-              <span>3 viajeros</span>
-              <span>Transporte público + a pie</span>
-            </div>
-          </a>
-
-          <a class="destination-card" href="destinations/rome.html">
-            <div class="destination-card-copy">
-              <p class="status">Guía completa</p>
-              <h3>Roma</h3>
-              <p>Tres itinerarios para 4 días: Roma esencial, arte y barrios o excursión a Ostia Antica.</p>
-              <span class="destination-card-link">Abrir guía <span aria-hidden="true">→</span></span>
-            </div>
-            <div class="destination-card-meta">
-              <span>11–14 sep 2026</span>
-              <span>3 viajeros</span>
-              <span>Transporte público + a pie</span>
-            </div>
-          </a>
-
-          <a class="destination-card" href="destinations/venice.html">
-            <div class="destination-card-copy">
-              <p class="status">Guía completa</p>
-              <h3>Venecia</h3>
-              <p>Tres itinerarios para 4 días: San Marcos y arte, Tintoretto o excursión a Murano y Burano.</p>
-              <span class="destination-card-link">Abrir guía <span aria-hidden="true">→</span></span>
-            </div>
-            <div class="destination-card-meta">
-              <span>11–14 sep 2026</span>
-              <span>3 viajeros</span>
-              <span>Transporte público + a pie</span>
-            </div>
-          </a>
+          <div class="results-heading"><p id="results-count" aria-live="polite">16 destinos</p><p>Busca por nombre o filtra para llegar a la guía.</p></div>
+          <div class="destination-grid" id="destination-grid"></div>
+          <div class="filter-empty" id="filter-empty" hidden><h3>No hay coincidencias</h3><p>Prueba a retirar un filtro o buscar otro nombre.</p><button class="button" type="button" onclick="document.querySelector('#reset-filters').click()">Ver todos</button></div>
+          <noscript><p class="filter-empty">Necesitas JavaScript para utilizar el buscador. Las guías siguen disponibles directamente en la carpeta de destinos.</p></noscript>
         </div>
       </section>
 
-      <section class="project-section container" id="proyecto" aria-labelledby="project-title">
-        <p class="eyebrow">Una decisión más sencilla</p>
-        <h2 id="project-title">Toda la información, en un mismo lugar.</h2>
+      <section class="travel-mode-promo container" aria-labelledby="travel-mode-title"><div><p class="eyebrow">Cuando llegue la revelación</p><h2 id="travel-mode-title">Del destino posible al viaje real</h2><p>El 9 de septiembre podréis guardar vuelo, aeropuerto, hotel y ruta elegida, y seguir una lista de comprobaciones antes de salir.</p></div><a class="button" href="viaje.html">Abrir modo viaje</a></section>
 
-        <div class="principles-grid">
-          <article>
-            <span>01</span>
-            <h3>Comparar</h3>
-            <p>Organizar los datos clave para entender rápidamente cada opción.</p>
-          </article>
-          <article>
-            <span>02</span>
-            <h3>Decidir</h3>
-            <p>Valorar cada destino con criterios claros y útiles para el viaje.</p>
-          </article>
-          <article>
-            <span>03</span>
-            <h3>Preparar</h3>
-            <p>Reunir la información práctica cuando llegue el momento de viajar.</p>
-          </article>
-        </div>
-      </section>
     </main>
 
-    <footer>
-      <div class="container footer-inner">
-        <p>Próximos destinos</p>
-        <p>Un cuaderno para imaginar el siguiente viaje.</p>
-      </div>
-    </footer>
+    <footer><div class="container footer-inner"><p>Próximos destinos</p><p>16 guías para el 11–14 de septiembre de 2026.</p></div></footer>
   </body>
 </html>

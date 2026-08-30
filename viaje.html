@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Modo viaje para completar vuelos, hotel, ruta y comprobaciones del viaje sorpresa de septiembre de 2026.">
+    <title>Modo viaje · Próximos destinos</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="css/trips.css?v=6">
+    <script src="js/destinations-data.js?v=1" defer></script>
+    <script src="js/trip-mode.js?v=1" defer></script>
+  </head>
+  <body class="trip-mode-page">
+    <header class="site-header container"><a class="brand" href="index.html" aria-label="Volver a Próximos destinos"><span class="brand-mark" aria-hidden="true">N</span><span>Próximos destinos</span></a><nav aria-label="Navegación principal"><a href="index.html#destinos">Destinos</a><a href="#preparacion" aria-current="page">Modo viaje</a></nav></header>
+
+    <main>
+      <section class="trip-mode-hero"><div class="container trip-mode-hero-grid"><div><p class="eyebrow">11–14 de septiembre de 2026</p><h1>Modo viaje</h1><p>Completa esta página cuando Waynabox revele el destino el 9 de septiembre. No presupone aeropuerto, vuelo ni hotel: solo organiza los datos confirmados y abre la guía correcta.</p></div><aside><span id="trip-countdown">Calculando fecha…</span><strong>Barcelona · 3 personas</strong><p>Vuelo + hotel · equipaje estándar</p></aside></div></section>
+
+      <section class="trip-mode-section container" id="preparacion" aria-labelledby="preparation-title">
+        <div class="section-heading"><div><p class="eyebrow">Datos confirmados</p><h2 id="preparation-title">Preparar la reserva real</h2></div><p>Los datos se guardan únicamente en este navegador. No se envían a ningún servidor.</p></div>
+
+        <form class="trip-form" id="trip-form">
+          <fieldset><legend>Destino y ruta</legend><div class="trip-form-grid">
+            <label>Destino revelado<select id="confirmed-destination" name="destination"><option value="">Selecciona el destino</option></select></label>
+            <label>Ruta elegida<select id="confirmed-route" name="route" disabled><option value="">Selecciona primero el destino</option></select></label>
+          </div><div class="trip-link-row"><a id="selected-guide-link" class="button" href="#" hidden>Abrir guía</a><a id="selected-route-link" class="button button-secondary" href="#" hidden>Abrir ruta</a><a id="selected-incidents-link" class="button button-secondary" href="#" hidden>Revisar incidencias</a></div></fieldset>
+
+          <fieldset><legend>Vuelo de ida · viernes 11</legend><div class="trip-form-grid">
+            <label>Número de vuelo<input name="outboundFlight" autocomplete="off" placeholder="Ej.: VY1234"></label>
+            <label>Hora de salida desde Barcelona<input name="outboundDeparture" type="time"></label>
+            <label>Aeropuerto de llegada<input name="arrivalAirport" autocomplete="off" placeholder="Nombre o código"></label>
+            <label>Hora de llegada<input name="arrivalTime" type="time"></label>
+          </div></fieldset>
+
+          <fieldset><legend>Vuelo de vuelta · lunes 14</legend><div class="trip-form-grid">
+            <label>Aeropuerto de salida<input name="returnAirport" autocomplete="off" placeholder="Nombre o código"></label>
+            <label>Número de vuelo<input name="returnFlight" autocomplete="off" placeholder="Ej.: VY5678"></label>
+            <label>Hora de salida<input name="returnDeparture" type="time"></label>
+            <label>Hora de llegada a Barcelona<input name="returnArrival" type="time"></label>
+          </div></fieldset>
+
+          <fieldset><legend>Hotel</legend><div class="trip-form-grid">
+            <label>Nombre<input name="hotelName" autocomplete="organization" placeholder="Hotel confirmado"></label>
+            <label>Dirección<input name="hotelAddress" autocomplete="street-address" placeholder="Dirección completa"></label>
+            <label>Entrada o consigna<input name="checkIn" autocomplete="off" placeholder="Hora y condiciones"></label>
+            <label>Salida o consigna<input name="checkOut" autocomplete="off" placeholder="Hora y condiciones"></label>
+          </div></fieldset>
+
+          <fieldset><legend>Notas compartidas</legend><label>Reservas, localizadores o decisiones pendientes<textarea name="notes" rows="5" placeholder="No guardes números completos de tarjetas ni documentación sensible."></textarea></label></fieldset>
+        </form>
+        <div class="trip-save-row"><p id="save-status" aria-live="polite">Todavía no hay datos guardados.</p><button class="danger-button" id="clear-trip-data" type="button">Borrar datos guardados</button></div>
+      </section>
+
+      <section class="travel-checklist-section" aria-labelledby="checklist-title"><div class="container"><div class="section-heading"><div><p class="eyebrow">9–11 de septiembre</p><h2 id="checklist-title">Lista antes de salir</h2></div><p>Marca cada punto después de comprobarlo, no por adelantado.</p></div>
+        <div class="travel-checklist">
+          <label><input id="check-destination" type="checkbox"><span><strong>Destino y documentación</strong>Confirmar destino, DNI o pasaporte en vigor y TSE de las tres personas.</span></label>
+          <label><input id="check-flight" type="checkbox"><span><strong>Vuelos reales</strong>Revisar aeropuertos, terminales, posibles escalas y equipaje permitido.</span></label>
+          <label><input id="check-transfer" type="checkbox"><span><strong>Aeropuerto ↔ hotel</strong>Elegir transporte público con los horarios reales de llegada y salida.</span></label>
+          <label><input id="check-route" type="checkbox"><span><strong>Ruta elegida</strong>Abrir la guía y decidir una de las tres opciones según el vuelo.</span></label>
+          <label><input id="check-tickets" type="checkbox"><span><strong>Entradas</strong>Comprobar tres plazas en las visitas marcadas como sensibles y aplicar el plan B si no existen.</span></label>
+          <label><input id="check-disruptions" type="checkbox"><span><strong>Huelgas y obras</strong>Revisar operador urbano, ferrocarril y eventos el día 9 y de nuevo cada mañana.</span></label>
+          <label><input id="check-weather" type="checkbox"><span><strong>Tiempo y equipaje</strong>Consultar la previsión en directo de la guía y ajustar capas, lluvia y calzado.</span></label>
+          <label><input id="check-payments" type="checkbox"><span><strong>Pagos</strong>Preparar dos tarjetas, moneda local si procede y rechazar conversiones dinámicas.</span></label>
+          <label><input id="check-bookings" type="checkbox"><span><strong>Reservas accesibles</strong>Tener billetes y localizadores disponibles en los teléfonos de más de una persona.</span></label>
+        </div>
+      </div></section>
+    </main>
+
+    <footer><div class="container footer-inner"><p>Próximos destinos</p><p>Los datos del modo viaje permanecen en este navegador.</p></div></footer>
+  </body>
+</html>

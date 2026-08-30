@@ -1,73 +1,75 @@
-# Trips
+# Próximos destinos
 
-Sitio web estático para reunir posibles destinos de viaje. Cada destino tendrá su
-propia página con la información necesaria para comparar opciones y preparar el
-viaje.
+Sitio web estático para consultar los 16 posibles destinos del viaje sorpresa de tres personas desde Barcelona, del 11 al 14 de septiembre de 2026. Cada guía propone tres rutas completas y reúne horarios, precios, transporte, distancias a pie, entradas, presupuesto, comida, tiempo, incidencias y requisitos para personas españolas.
 
-## Estructura inicial
+## Destinos incluidos
+
+Ámsterdam, Basilea, Berlín, Bolonia, Bristol, Budapest, Estocolmo, Ginebra, Londres, Lyon, Mánchester, Milán, París, Praga, Roma y Venecia.
+
+## Funciones principales
+
+- Portada compacta con búsqueda y filtros para abrir rápidamente la guía revelada.
+- Tres itinerarios seleccionables por destino, con la ruta activa reflejada en la URL.
+- Mapas en diálogo, enlaces oficiales y resúmenes diarios de desplazamientos.
+- Conversión EUR/moneda local mediante Frankfurter, con un tipo de cambio fechado como alternativa.
+- Previsión para las fechas del viaje mediante Open-Meteo, además del contexto histórico ya investigado.
+- Modo viaje para completar destino, ruta, vuelos, hotel y comprobaciones cuando Waynabox revele la reserva el 9 de septiembre.
+- Imágenes WebP locales, optimizadas y acreditadas.
+
+El modo viaje guarda la información únicamente en `localStorage`, dentro del navegador usado. No existe servidor ni sincronización entre dispositivos; no deben guardarse datos de tarjetas ni documentación sensible.
+
+## Estructura
 
 ```text
 .
-├── assets/
-│   └── images/         # Fotografías locales y documento de créditos
+├── .github/workflows/
+│   ├── static.yml           # Validación y publicación en GitHub Pages
+│   └── links.yml            # Revisión semanal de enlaces externos
+├── assets/images/           # Fotografías WebP y créditos
 ├── css/
-│   ├── trips.css       # Variables, estilos base y componentes reutilizables
-│   └── destination.css # Componentes de las guías de destino
-├── destinations/
-│   └── budapest.html   # Primera página de destino: Budapest
+│   ├── trips.css            # Base visual, portada y modo viaje
+│   └── destination.css      # Componentes de las guías
+├── destinations/            # Una página HTML por destino
 ├── js/
-│   └── destination.js  # Cambio, previsión meteorológica y mapas
-├── DESTINATION_PAGE_PLAYBOOK.md # Requisitos reutilizables de cada destino
-├── index.html     # Portada del sitio
-├── README.md      # Documentación del proyecto
-└── .gitignore     # Archivos que Git no debe versionar
+│   ├── destination.js       # Rutas, cambio, tiempo y mapas
+│   ├── destinations-data.js # Catálogo resumido de los 16 destinos
+│   ├── index.js             # Búsqueda y filtros de la portada
+│   └── trip-mode.js         # Datos y lista del modo viaje
+├── scripts/
+│   └── validate-site.mjs    # Comprobaciones estructurales sin dependencias
+├── DESTINATION_PAGE_PLAYBOOK.md
+├── index.html
+└── viaje.html
 ```
 
-## Biblioteca CSS
+## Ver y validar en local
 
-`css/trips.css` contiene la paleta cromática, variables semánticas, estilos base y
-componentes compartidos. Para utilizarla en una página:
-
-```html
-<link rel="stylesheet" href="css/trips.css">
-```
-
-La paleta inicial está disponible mediante estas variables:
-
-```css
-var(--ink-black)
-var(--deep-space-blue)
-var(--blue-slate)
-var(--dusty-denim)
-var(--eggshell)
-```
-
-## Ver el sitio en local
-
-Puedes abrir `index.html` directamente en un navegador. Si prefieres usar un
-servidor local y tienes Python instalado, ejecuta desde esta carpeta:
+Se puede abrir `index.html` directamente. Para reproducir mejor el comportamiento publicado, inicia un servidor desde la raíz:
 
 ```bash
 python -m http.server 8000
 ```
 
-Después, visita `http://localhost:8000`.
+Después visita `http://localhost:8000`.
+
+La validación no instala dependencias y requiere una versión moderna de Node.js:
+
+```bash
+node scripts/validate-site.mjs
+```
+
+Comprueba, entre otras cosas, los 16 destinos, enlaces y recursos locales, estructura de rutas, resúmenes de movilidad, atributos de accesibilidad, dimensiones de imagen, catálogo compartido y uso del endpoint vigente de Frankfurter.
+
+## Datos y mantenimiento
+
+La metodología editorial completa está en `DESTINATION_PAGE_PLAYBOOK.md`. Los horarios, precios, inventario de entradas, huelgas, obras, eventos, restauración, tipos de cambio y previsiones son datos volátiles. Deben volver a comprobarse el 9 de septiembre, cuando se revele el destino, y otra vez en la víspera o el propio día cuando la guía así lo indique.
+
+Las cantidades de la portada son resúmenes de consulta, no nuevas tarifas: proceden de los presupuestos y las distancias ya documentados en cada guía. El transporte entre aeropuerto y hotel sigue excluido porque todavía se desconocen ambos puntos.
 
 ## Publicación
 
-El repositorio está pensado para publicarse mediante GitHub Pages en:
+Los cambios enviados a `main` se validan y, si todo es correcto, se publican mediante GitHub Pages en:
 
 <https://mpadilvi.github.io/trips.github.io/>
 
-Los destinos y la estructura definitiva se añadirán a medida que se definan.
-
-## Datos dinámicos
-
-La guía de Budapest consulta dos servicios sin clave de API desde el navegador:
-
-- Frankfurter, basado en los tipos de referencia del BCE, para actualizar HUF/EUR.
-- Open-Meteo para mostrar la previsión del 11 al 14 de septiembre de 2026 cuando
-  esas fechas entren en su horizonte disponible.
-
-Si cualquiera de los servicios no responde, la página conserva una referencia de
-cambio fechada y los valores climáticos oficiales de septiembre como alternativa.
+Las propuestas de cambio también ejecutan la validación estructural. Un flujo semanal separado revisa los enlaces externos para detectar fuentes que hayan cambiado o desaparecido.

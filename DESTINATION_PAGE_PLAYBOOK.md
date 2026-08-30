@@ -2,7 +2,7 @@
 
 This document records the requirements and decisions established while building Budapest, the first completed destination page. Use it as the working brief for every future destination page in this repository.
 
-Last consolidated: 27 August 2026.
+Last consolidated: 30 August 2026.
 
 ## 1. Working rules
 
@@ -289,15 +289,21 @@ If official information is missing, conflicting or only available through an ina
 
 ## 14. Current technical pattern
 
-- `css/trips.css`: shared palette, typography, layout and general components.
+- `index.html`, `js/destinations-data.js` and `js/index.js`: compact destination catalogue, search and filters for opening the revealed guide quickly. Do not add destination comparison or selection: Waynabox determines the destination.
+- `viaje.html` and `js/trip-mode.js`: post-reveal trip mode; confirmed details and checklist remain only in the current browser's `localStorage`.
+- `css/trips.css`: shared palette, typography, layout, catalogue and trip-mode components.
 - `css/destination.css`: destination-specific itinerary, widget, restaurant, mobility and map components.
 - `js/destination.js`: route tabs, live exchange rates, live weather and map dialog.
 - `destinations/<slug>.html`: one standalone page per possible destination.
 - Frankfurter/BCE: live currency reference without an API key.
 - Open-Meteo: live forecast and historical weather data without an API key.
 - Google Maps query embeds: location previews and external directions.
+- `scripts/validate-site.mjs`: dependency-free structural validation run locally and before GitHub Pages deployment.
+- `.github/workflows/links.yml`: scheduled review of external source links.
 
 When CSS or JavaScript changes, increment the cache-busting query string in the HTML. Preserve graceful fallbacks when JavaScript or an external API fails.
+
+Use local WebP photographs with exact `width` and `height` attributes. Keep the original Wikimedia or other source URL, author and licence in `assets/images/CREDITS.md`; the source format does not need to match the optimised local copy.
 
 Useful data conventions already established:
 
@@ -342,4 +348,7 @@ A destination page is ready for review when:
 - Every paid or timed attraction has passed the 48-hour feasibility audit; red-status attractions are exterior/context only and amber ones have a concrete fallback.
 - Announced strikes, planned transport works and date-specific events have been checked, linked and incorporated into the route where they alter access or timing.
 - Unknowns and conditional plans are clearly labelled.
+- The destination is registered in `js/destinations-data.js` with route hashes that exactly match the page.
+- Every local photograph is WebP and declares descriptive `alt`, `width` and `height` attributes.
+- `node scripts/validate-site.mjs` passes.
 - `git diff --check` passes.

@@ -20,6 +20,9 @@
 
 .destination-page [data-huf],
 .destination-page [data-huf-total],
+.destination-page [data-local],
+.destination-page [data-local-total],
+.destination-page [data-local-range-min],
 .destination-page time,
 .route-number,
 .route-budget,
@@ -54,6 +57,18 @@
   background:
     radial-gradient(circle at 85% 20%, rgb(138 114 85 / 24%), transparent 22rem),
     var(--deep-space-blue);
+}
+
+.destination-hero .eyebrow,
+.itinerary-section .eyebrow,
+.food-section .eyebrow {
+  color: var(--color-accent-on-dark);
+}
+
+.destination-hero :focus-visible,
+.itinerary-section :focus-visible,
+.food-section :focus-visible {
+  outline-color: var(--color-accent-on-dark);
 }
 
 .destination-hero-grid {
@@ -338,7 +353,7 @@
 
 .traveler-nuance .nuance-number {
   margin-bottom: 0.45rem;
-  color: var(--dusty-denim);
+  color: var(--color-accent);
   font-family: var(--font-numeric);
   font-size: 0.75rem;
   font-weight: 850;
@@ -478,7 +493,7 @@
 }
 
 .route-tabs button:focus-visible {
-  outline: 0.2rem solid var(--muted-clay);
+  outline: 0.2rem solid var(--color-accent-on-dark);
   outline-offset: 0.15rem;
 }
 
@@ -489,11 +504,15 @@
 }
 
 .route-tabs span {
-  color: var(--muted-clay);
+  color: var(--color-accent);
   font-family: var(--font-numeric);
   font-size: 0.78rem;
   font-weight: 850;
   font-variant-numeric: tabular-nums;
+}
+
+.route-tabs button:not(.is-active) span {
+  color: var(--color-accent-on-dark);
 }
 
 .route-tabs strong {
@@ -556,7 +575,7 @@
 .widget-kicker,
 .food-area {
   margin-bottom: 0.5rem;
-  color: var(--dusty-denim);
+  color: var(--color-accent);
   font-size: 0.72rem;
   font-weight: 850;
   letter-spacing: 0.1em;
@@ -649,7 +668,7 @@
 
 .day-card > header span {
   flex: 0 0 auto;
-  color: var(--dusty-denim);
+  color: var(--color-accent);
   font-size: 0.72rem;
   font-weight: 850;
   letter-spacing: 0.08em;
@@ -740,6 +759,9 @@
 .stop-actions a,
 .stop-actions button,
 .source-links a {
+  min-height: 2.75rem;
+  display: inline-flex;
+  align-items: center;
   padding: 0.42rem 0.7rem;
   color: var(--deep-space-blue);
   font-family: inherit;
@@ -842,7 +864,7 @@
 
 .converter > span {
   padding-bottom: 0.75rem;
-  color: var(--dusty-denim);
+  color: var(--color-accent);
   font-weight: 900;
 }
 
@@ -980,7 +1002,7 @@
 }
 
 .pass-result span {
-  color: var(--dusty-denim);
+  color: var(--color-accent);
   font-size: 0.72rem;
   font-weight: 850;
   text-transform: uppercase;

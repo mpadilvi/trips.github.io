@@ -53,10 +53,12 @@ async function loadExchangeRate() {
   const status = document.querySelector("#fx-status");
   if (!status) return;
   try {
-    const response = await fetch(`https://api.frankfurter.app/latest?from=EUR&to=${CURRENCY_CODE}`);
+    const response = await fetch(`https://api.frankfurter.dev/v1/latest?from=EUR&to=${CURRENCY_CODE}`);
     if (!response.ok) throw new Error("Respuesta no válida");
     const data = await response.json();
-    currentRate = Number(data.rates[CURRENCY_CODE]);
+    const liveRate = Number(data.rates?.[CURRENCY_CODE]);
+    if (!Number.isFinite(liveRate) || liveRate <= 0) throw new Error("Tipo de cambio no válido");
+    currentRate = liveRate;
     updateConvertedPrices(currentRate);
     status.textContent = `1 € = ${currentRate.toLocaleString("es-ES")} ${CURRENCY_LABEL} · BCE, ${new Date(data.date).toLocaleDateString("es-ES")}.`;
     syncConverter("eur");
