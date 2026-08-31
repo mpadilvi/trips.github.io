@@ -91,6 +91,13 @@ Only one itinerary should be visible at a time. Use accessible tabs, support key
 
 Do not present a visit as available merely because the building exists. Check the weekday, the exact date, holidays, exceptional closures and the time required to reach it.
 
+### Full-day pacing
+
+- Treat Saturday and Sunday as complete travel days, but do not measure quality only by the final clock time. A day trip, steep route, long museum sequence or roughly 9–14 km of walking may already be full even when its last named stop ends around 17:00–18:00.
+- When a normal city day would otherwise end early, extend it with a geographically coherent riverfront, neighbourhood, market hall, viewpoint or dinner area. Prefer flexible outdoor stops over another timed ticket or general museum.
+- A useful target is to finish outdoor sightseeing near sunset or early evening and leave the traveller close to dinner and public transport. State meal/rest periods instead of silently treating every gap as sightseeing time.
+- Do not repeat a district already covered in the same itinerary merely to make the day look longer. Recalculate the walking range and transport labels whenever a day is extended.
+
 ### Friday and Monday
 
 - Friday starts only after a conservative airport, transfer, check-in and luggage allowance.
