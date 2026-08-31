@@ -2,7 +2,7 @@
 
 This document records the requirements and decisions established while building Budapest, the first completed destination page. Use it as the working brief for every future destination page in this repository.
 
-Last consolidated: 30 August 2026.
+Last consolidated: 31 August 2026.
 
 ## 1. Working rules
 
@@ -62,6 +62,16 @@ Typical distinctions may include:
 - Essential first visit: major landmarks and the destination's defining experience.
 - History and culture: more context, museums or memory sites.
 - Destination plus day trip: a nearby town or site when the schedule supports it.
+
+### Museum balance and sense of place
+
+- Do not build itineraries as sequences of general art museums. The default preference is to experience the destination through its streets, architecture, markets, landscapes, infrastructure, religious buildings, memory sites and everyday neighbourhoods.
+- Retain a fine-art museum only when it is genuinely destination-defining or exceptional in its field, such as the Louvre, Musée d’Orsay, Rijksmuseum, Van Gogh Museum, Pinacoteca di Brera, National Gallery or Gallerie dell’Accademia. State explicitly why that collection cannot be replaced by a more generic museum visit.
+- Aim for no more than one extensive fine-art collection in a single itinerary unless two institutions are both exceptional, materially different and central to understanding the destination. Do not repeat the same art museum across several routes merely to fill time.
+- Site-specific art may remain when the work and building form one experience—for example Tintoretto at San Rocco, frescoes in a church or public art tied to political history—but explain that relationship.
+- Design, craft, science, industrial, social-history and archaeological museums are not automatically excluded. Judge them by how strongly they explain the destination and balance them with outdoor or urban stops.
+- When removing a museum, replace it with a complete and geographically coherent visit, not an empty gap. Recalculate walking distance, schedule, necessary spend, realistic range, pass advice, nearby restaurant notes and source text.
+- Write at least two substantive sentences for each actual destination stop. Explain what the traveller will notice, what story the place adds and why it is worth spending the allocated time there. Opening hours and price alone are not a description.
 
 Only one itinerary should be visible at a time. Use accessible tabs, support keyboard navigation and keep the selected route in the URL hash.
 
