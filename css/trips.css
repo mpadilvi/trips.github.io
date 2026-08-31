@@ -589,6 +589,7 @@ nav a {
   gap: 0.8rem;
   padding: 0.9rem 1.4rem;
   background: var(--pale-denim);
+  border-radius: 0% 0% 0.82rem 0.82rem;
 }
 
 .destination-card-link {
