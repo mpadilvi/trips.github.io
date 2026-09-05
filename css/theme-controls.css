@@ -1,0 +1,80 @@
+/* Selector claro/oscuro, disponible con cualquiera de los dos temas. */
+
+.site-header nav,
+.destination-header nav {
+  min-width: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.site-header nav::-webkit-scrollbar,
+.destination-header nav::-webkit-scrollbar {
+  display: none;
+}
+
+.theme-toggle {
+  min-width: max-content;
+  min-height: 2.5rem;
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  padding: 0.45rem 0.75rem;
+  color: var(--color-primary);
+  font: inherit;
+  font-size: 0.78rem;
+  font-weight: 720;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.theme-toggle:hover {
+  color: var(--color-background);
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+.theme-toggle:focus-visible {
+  outline: 0.2rem solid var(--color-accent);
+  outline-offset: 0.2rem;
+}
+
+.theme-toggle-icon {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+@media (max-width: 35rem) {
+  .destination-header-inner {
+    gap: 0.75rem;
+  }
+
+  .destination-header nav {
+    gap: 0.65rem;
+  }
+
+  .destination-header nav a {
+    flex: 0 0 auto;
+    font-size: 0.76rem;
+    white-space: nowrap;
+  }
+
+  .theme-toggle {
+    width: 2.5rem;
+    min-width: 2.5rem;
+    padding-inline: 0;
+  }
+
+  .theme-toggle-label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+}
